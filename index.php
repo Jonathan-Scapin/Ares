@@ -15,61 +15,71 @@ $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     <title>ARE Simulateur</title>
 </head>
 <body>
-    <h1>Bienvenu sur ARES</h1>
-    <p>Simulateur de complement de revenu professionnel des micro-entreprises</p>
-    <form action="">
-        <div id="activitiType">
-            <div class="selectedType">
-                <div>
-                    <input type="radio" name="type" id="achatvente" onclick="checkedRadioBtn()">
-                    <label for="type">Achat/Vente</label>
+    <header>
+        <h1>Bienvenu sur ARES</h1>
+        <p>Simulateur de complement de revenu professionnel des micro-entreprises</p>
+    </header>
+    <main>
+        <section id="calcAre">
+            <form action="">
+                <div id="activitiType">
+                    <div class="selectedType">
+                        <div>
+                            <input type="radio" name="type" id="achatvente" onclick="checkedRadioBtn()">
+                            <label for="type">Achat/Vente</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="type" id="bic" onclick="checkedRadioBtn()">
+                            <label for="type">BIC</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="type" id="bnc" onclick="checkedRadioBtn()">
+                            <label for="type">BNC</label>
+                        </div>
+        
+                    </div>
+                    <div class="ca">
+                        <div>
+                            <label for="cabrut">CA Brut</label>
+                            <input type="text" name="cabrut" id="cabrut" onkeyup="inputValue(event)" disabled="disabled">
+                        </div>
+                        <div>
+                            <label for="canet">Ca Net</label>
+                            <input type="text" name="canet" id="canet" disabled="disabled">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" name="type" id="bic" onclick="checkedRadioBtn()">
-                    <label for="type">BIC</label>
+                <div id="fullAre">
+                    <div>
+                        <label for="areJ">Montant ARE journaliere</label>
+                        <input type="text" name="areJ" id="areJ" onkeyup="inputValueAre(event)" disabled="disabled">
+                    </div>
+                    <div>
+                        <label for="nbDayMonth">Nombre jours mois</label>
+                        <input type="text" name="nbDayMonth" id="nbDayMonth" value="<?= $number;?>" disabled="disabled">
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" name="type" id="bnc" onclick="checkedRadioBtn()">
-                    <label for="type">BNC</label>
+                <div id="minifyAre">
+                    <div>
+                        <label for="reportFA">Montant ARE complete</label>
+                        <input type="text" name="reportFA" id="reportFA" disabled="disabled">
+                    </div>
+                    <div>
+                        <label for="mAre">Montant deduit</label>
+                        <input type="text" name="mAre" id="mAre" disabled="disabled">
+                    </div>
                 </div>
-
-            </div>
-            <div class="ca">
-                <div>
-                    <label for="cabrut">CA Brut</label>
-                    <input type="text" name="cabrut" id="cabrut" onkeyup="inputValue(event)" disabled="disabled">
+                <div class="resultM">
+                    <label for="resultMinimify">Montant de votre ARE</label>
+                    <input type="text" name="resultMinimify" id="resultMinimify" disabled="disabled">
                 </div>
-                <div>
-                    <label for="canet">Ca Net</label>
-                    <input type="text" name="canet" id="canet" disabled="disabled">
-                </div>
-            </div>
-        </div>
-        <div id="fullAre">
-            <div>
-                <label for="areJ">Montant ARE journaliere</label>
-                <input type="text" name="areJ" id="areJ" onkeyup="inputValueAre(event)" disabled="disabled">
-            </div>
-            <div>
-                <label for="nbDayMonth">Nombre jours mois</label>
-                <input type="text" name="nbDayMonth" id="nbDayMonth" value="<?= $number;?>" disabled="disabled">
-            </div>
-        </div>
-        <div id="minifyAre">
-            <div>
-                <label for="reportFA">Montant ARE complete</label>
-                <input type="text" name="reportFA" id="reportFA" disabled="disabled">
-            </div>
-            <div>
-                <label for="mAre">Montant deduit</label>
-                <input type="text" name="mAre" id="mAre" disabled="disabled">
-            </div>
-        </div>
-        <div class="resultM">
-            <label for="resultMinimify">Montant de votre ARE</label>
-            <input type="text" name="resultMinimify" id="resultMinimify" disabled="disabled">
-        </div>
-    </form>
+            </form>
+        </section>
+        <aside id="fileDownload">
+            <h3>Vous pouvez télécharger un fichier récapitulatif</h3>
+            <button type="submit">Télécharger</button>
+        </aside>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
