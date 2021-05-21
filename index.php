@@ -21,19 +21,19 @@ $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     </header>
     <main>
         <section id="calcAre">
-            <form action="">
+            <form id="calc" action="">
                 <div id="activitiType">
                     <div class="selectedType">
                         <div>
-                            <input type="radio" name="type" id="achatvente" onclick="checkedRadioBtn()">
+                            <input type="radio" name="type" id="achatvente" checked onclick="checkedRadioBtn()" onchange="resetCheckedRadioBtn()">
                             <label for="type">Achat/Vente</label>
                         </div>
                         <div>
-                            <input type="radio" name="type" id="bic" onclick="checkedRadioBtn()">
+                            <input type="radio" name="type" id="bic" onclick="checkedRadioBtn()" onchange="resetCheckedRadioBtn()">
                             <label for="type">BIC</label>
                         </div>
                         <div>
-                            <input type="radio" name="type" id="bnc" onclick="checkedRadioBtn()">
+                            <input type="radio" name="type" id="bnc" onclick="checkedRadioBtn()" onchange="resetCheckedRadioBtn()">
                             <label for="type">BNC</label>
                         </div>
         

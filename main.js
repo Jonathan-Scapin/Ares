@@ -1,6 +1,6 @@
 let caBrut = document.getElementById("cabrut").value;
 let caNet = document.getElementById("canet");
-let reduceCa;
+let reduceCa = 0;
 let areJ = parseInt(document.getElementById("areJ").value);
 let nbDayMonth = parseInt(document.getElementById("nbDayMonth").value);
 let reportFA = document.getElementById("reportFA");
@@ -8,7 +8,7 @@ let mAre = document.getElementById("mAre");
 let resultMinimify = document.getElementById("resultMinimify");
 let btnRadio = document.getElementsByName("type");
 
-
+console.log(reduceCa)
 function checkedRadioBtn() {
     if (document.getElementById("achatvente").checked == true) 
     {
@@ -22,13 +22,16 @@ function checkedRadioBtn() {
         reduceCa = 0.66;
     }
     document.getElementById("cabrut").disabled=false;
-
 }
-
-function radioChange() {
-    console.log(btnRadio[0].checked);
-    console.log(btnRadio[1].checked);
-    console.log(btnRadio[2].checked);
+function resetCheckedRadioBtn() {
+    if (reduceCa != 0) {
+        caBrut.value = "";
+        caNet.value = "";
+        areJ.value = "";
+        reportFA.value = "";
+        mAre.value = "";
+        resultMinimify.value = "";
+    } 
 }
 
 function inputValue(event) {
