@@ -21,7 +21,8 @@ function checkedRadioBtn() {
     {
         reduceCa = 0.66;
     }
-    document.getElementById("cabrut").disabled=false;
+    //document.getElementById("cabrut").disabled=false;
+    document.getElementById("cabrut").removeAttribute('readonly');
 }
 function resetCheckedRadioBtn() {
     if (reduceCa != 0) {
@@ -37,7 +38,7 @@ function resetCheckedRadioBtn() {
 function inputValue(event) {
     caBrut = event.target;
     caNet.value = (caBrut.value * reduceCa).toFixed(2);
-    document.getElementById("areJ").disabled=false;
+    document.getElementById("areJ").removeAttribute('readonly');
 }
 
 function inputValueAre(event) {
@@ -47,4 +48,3 @@ function inputValueAre(event) {
     resultMinimify.value = reportFA.value - mAre.value;
     resultMinimify.classList.add("result");
 }
-

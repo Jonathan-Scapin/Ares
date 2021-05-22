@@ -99,18 +99,20 @@ main{
     border-radius: 15px;
     padding: 0 1em;
 }
-#fileDownload{
+#generatePdf{
     margin-top: 1em;
     padding: 1em;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
-#fileDownload button{
-    max-width: 100px;
+#generatePdf input{
     border: 0;
-    border-radius: 5px;
-    background-color: #6991c7;
+    border-radius: 10px;
     padding: 1em;
+    background-color: #6991c7;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 .selectedType div, .ca div, #fullAre div, #minifyAre div, .resultM, aside{
     padding: 1em 0;
@@ -145,7 +147,14 @@ input{
     -moz-transition: all .4s ease;
     transition: all .4s ease;
 }
-
+footer, #identity{
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+}
+#identity a{
+    text-decoration: none;
+    color: inherit;
+}
 @media (min-width: 1200px) { 
     body{
         max-width: 1000px;
