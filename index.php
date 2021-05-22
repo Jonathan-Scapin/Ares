@@ -1,5 +1,4 @@
 <?php 
-session_start();
 $month=date("m");
 $year=date("y");
 $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
