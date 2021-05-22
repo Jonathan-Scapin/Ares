@@ -160,18 +160,9 @@ footer, #identity{
         max-width: 1000px;
     }
     main{
-        flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
     }
     #calcAre{
         width: 65%;
-    }
-    
-    #fileDownload{
-        width: 30%;
-        height: 150px;
-        margin-top: 0;
-        text-align: center;
-        justify-content: space-evenly;
     }
  }
