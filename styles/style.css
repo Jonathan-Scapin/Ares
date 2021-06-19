@@ -155,6 +155,18 @@ footer, #identity{
     text-decoration: none;
     color: inherit;
 }
+
+#selectView p{
+    text-align: right;
+}
+.viewMinDetails{
+    display: none!important;
+}
+
+#fullView{
+    cursor: pointer;
+}
+
 @media (min-width: 1200px) { 
     body{
         max-width: 1000px;

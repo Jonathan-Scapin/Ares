@@ -53,8 +53,4 @@ $pdf->Ln(50);
 $pdf->MultiCell(0,10,utf8_decode('Rappel : ce simulateur fonctionne avec les méthodes de calcul fournies par le site des autoentrepreneurs concernant le calcul de l\'are en cumul avec une activité professionnelle. Les résultats sont donnés à titre indicatif.'));
 $pdf->Output();
 
-
-
-
-
 ?>

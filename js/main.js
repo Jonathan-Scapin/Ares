@@ -7,8 +7,10 @@ let reportFA = document.getElementById("reportFA");
 let mAre = document.getElementById("mAre");
 let resultMinimify = document.getElementById("resultMinimify");
 let btnRadio = document.getElementsByName("type");
+let fullView = document.getElementById("fullView");
+let changingViewMode = document.querySelectorAll(".viewMinDetails");
 
-console.log(reduceCa)
+console.log(changingViewMode)
 function checkedRadioBtn() {
     if (document.getElementById("achatvente").checked == true) 
     {
@@ -47,4 +49,15 @@ function inputValueAre(event) {
     mAre.value = caNet.value * 0.70;
     resultMinimify.value = reportFA.value - mAre.value;
     resultMinimify.classList.add("result");
+}
+
+function changeView() {
+    for (var i = 0; i < changingViewMode.length; i++) {	
+        changingViewMode[i].classList.toggle("viewMinDetails");
+}   
+    if (fullView.innerHTML === "Vue détaillé") {
+        fullView.innerHTML = "Vue simplifié";
+      } else {
+        fullView.innerHTML = "Vue détaillé";
+    }
 }

@@ -44,7 +44,7 @@ $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
                             <label for="cabrut">CA Brut</label>
                             <input type="text" name="cabrut" id="cabrut" onkeyup="inputValue(event)" readonly>
                         </div>
-                        <div>
+                        <div class="viewMinDetails">
                             <label for="canet">Ca Net</label>
                             <input type="text" name="canet" id="canet" readonly>
                         </div>
@@ -55,17 +55,17 @@ $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
                         <label for="areJ">Montant ARE journaliere</label>
                         <input type="text" name="areJ" id="areJ" onkeyup="inputValueAre(event)" readonly>
                     </div>
-                    <div>
+                    <div class="viewMinDetails">
                         <label for="nbDayMonth">Nombre jours mois</label>
                         <input type="text" name="nbDayMonth" id="nbDayMonth" value="<?= $number;?>" readonly>
                     </div>
                 </div>
-                <div id="minifyAre">
+                <div id="minifyAre" class="viewMinDetails">
                     <div>
                         <label for="reportFA">Montant ARE complete</label>
                         <input type="text" name="reportFA" id="reportFA" readonly>
                     </div>
-                    <div>
+                    <div >
                         <label for="mAre">Montant deduit</label>
                         <input type="text" name="mAre" id="mAre" readonly>
                     </div>
@@ -73,6 +73,9 @@ $number = cal_days_in_month(CAL_GREGORIAN, $month, $year);
                 <div class="resultM">
                     <label for="resultMinimify">Montant de votre ARE</label>
                     <input type="text" name="resultMinimify" id="resultMinimify" readonly>
+                </div>
+                <div id="selectView">
+                    <p id="fullView" onclick="changeView()">Vue détaillé</p>
                 </div>
                 <div id="generatePdf">
                     <input type="submit" value="Télécharger au format PDF" onclick="sendData()">
